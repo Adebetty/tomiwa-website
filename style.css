@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --fontheadercolor: purple;
+}
+
+body {
+  text-decoration: none;
+  list-style-type: none;
+}
+.nav-bar {
+  background-color: #000;
+  font-size: 1.45rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 80px;
+  align-items: center;
+
+  width: 100%;
+  z-index: 10;
+}
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  margin-right: 67px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+.logo {
+  margin-right: auto;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./Tomiwa\ football\ logo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.5658);
+  z-index: 2;
+}
+.hero-content {
+  z-index: 5;
+  text-align: center;
+}
+h1 {
+  font-size: 2.589rem;
+  color: #b5a8d5;
+}
+.hero p {
+  font-size: 2rem;
+}
+.nav-links a:hover {
+  color: #b5a8d5;
+  font-size: 1.5rem;
+}
+.about {
+  display: flex;
+  font-size: 1.7rem;
+  background-color: lightgrey;
+  margin-top: 1rem;
+  padding: 10px;
+  gap: 30px;
+}
+h2 {
+  color: var(--fontheadercolor);
+}
+@media screen and (max-width: 430px) {
+  .nav-bar {
+    display: none;
+  }
+  .about {
+    display: flex;
+    flex-flow: column;
+    gap: 0px;
+  }
+  .about img{
+    width: 100%;
+    height: 100%;
+  }
+  .about p{
+    font-size: 1.25rem;
+  }
+}
